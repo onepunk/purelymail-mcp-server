@@ -2,7 +2,7 @@
   "mcpServers": {
     "purelymail": {
       "command": "npx",
-      "args": ["-y", "purelymail-mcp-server"],
+      "args": ["-y", "@onepunk/purelymail-mcp-server"],
       "env": {
         "PURELYMAIL_API_KEY": "${PURELYMAIL_API_KEY}"
       }

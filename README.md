@@ -1,19 +1,21 @@
-# PurelyMail MCP Server
+# @onepunk/purelymail-mcp-server
 
 A Model Context Protocol (MCP) server that provides AI assistants with access to PurelyMail's email management API.
+
+This is an onepunk fork of [gui-wf/purelymail-mcp-server](https://github.com/gui-wf/purelymail-mcp-server), maintained independently. Upstream is pulled in periodically via `git fetch upstream && git merge upstream/master`.
 
 ## Usage
 
 **Run with npx (no installation needed):**
 
 ```bash
-npx -y purelymail-mcp-server
+npx -y @onepunk/purelymail-mcp-server
 ```
 
 **Or use Nix (via GitHub flake):**
 
 ```bash
-nix run github:gui-wf/purelymail-mcp-server --quiet --refresh
+nix run github:onepunk/purelymail-mcp-server --quiet --refresh
 ```
 
 **Configure in your MCP client:**
@@ -23,7 +25,7 @@ nix run github:gui-wf/purelymail-mcp-server --quiet --refresh
   "mcpServers": {
     "purelymail": {
       "command": "npx",
-      "args": ["-y", "purelymail-mcp-server"],
+      "args": ["-y", "@onepunk/purelymail-mcp-server"],
       "env": {
         "PURELYMAIL_API_KEY": "your-api-key-here"
       }
@@ -85,7 +87,7 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
   "mcpServers": {
     "purelymail": {
       "command": "npx",
-      "args": ["-y", "purelymail-mcp-server"],
+      "args": ["-y", "@onepunk/purelymail-mcp-server"],
       "env": {
         "PURELYMAIL_API_KEY": "your-api-key-here"
       }
@@ -101,7 +103,7 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
   "mcpServers": {
     "purelymail": {
       "command": "nix",
-      "args": ["run", "github:gui-wf/purelymail-mcp-server", "--quiet", "--refresh"],
+      "args": ["run", "github:onepunk/purelymail-mcp-server", "--quiet", "--refresh"],
       "env": {
         "PURELYMAIL_API_KEY": "your-api-key-here"
       }
@@ -151,7 +153,7 @@ For Claude Code, create a `.mcp.json` file in your project root:
   "mcpServers": {
     "purelymail": {
       "command": "npx",
-      "args": ["-y", "purelymail-mcp-server"],
+      "args": ["-y", "@onepunk/purelymail-mcp-server"],
       "env": {
         "PURELYMAIL_API_KEY": "${PURELYMAIL_API_KEY}"
       }
@@ -209,18 +211,18 @@ The server provides 19 individual tools, each corresponding to a specific Purely
 
 ### Via npx (Recommended - No Installation)
 ```bash
-npx -y purelymail-mcp-server
+npx -y @onepunk/purelymail-mcp-server
 ```
 
 ### Via Nix (GitHub Flake)
 ```bash
-nix run github:gui-wf/purelymail-mcp-server --quiet --refresh
+nix run github:onepunk/purelymail-mcp-server --quiet --refresh
 ```
 
 ### From Source
 ```bash
 # Clone and setup
-git clone https://github.com/gui-wf/purelymail-mcp-server.git
+git clone https://github.com/onepunk/purelymail-mcp-server.git
 cd purelymail-mcp-server
 
 # Using Nix (recommended)

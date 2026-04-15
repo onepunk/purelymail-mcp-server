@@ -63,13 +63,13 @@
           ${pkgs.nodejs_20}/bin/npm publish
 
           echo "✅ Published successfully!"
-          echo "Package available at: https://www.npmjs.com/package/purelymail-mcp-server"
+          echo "Package available at: https://www.npmjs.com/package/@onepunk/purelymail-mcp-server"
         '';
 
         # Production package build
         packages.default = pkgs.buildNpmPackage {
           pname = "purelymail-mcp-server";
-          version = "3.0.0";
+          version = "3.0.1";
           src = ./.;
 
           npmDepsHash = "sha256-aUS8yO2xscDjJZf6KjVzCnEA4ZxawVH5gxlTZUyuO0g=";

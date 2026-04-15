@@ -1,7 +1,7 @@
 {
-  "name": "purelymail-mcp-server",
-  "version": "3.0.0",
-  "description": "MCP server for PurelyMail email service management",
+  "name": "@onepunk/purelymail-mcp-server",
+  "version": "3.0.1",
+  "description": "MCP server for PurelyMail email service management (onepunk fork of gui-wf/purelymail-mcp-server)",
   "keywords": [
     "mcp",
     "mcp-server",
@@ -10,16 +10,19 @@
     "ai",
     "claude"
   ],
-  "homepage": "https://github.com/gui-wf/purelymail-mcp-server#readme",
+  "homepage": "https://github.com/onepunk/purelymail-mcp-server#readme",
   "bugs": {
-    "url": "https://github.com/gui-wf/purelymail-mcp-server/issues"
+    "url": "https://github.com/onepunk/purelymail-mcp-server/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gui-wf/purelymail-mcp-server.git"
+    "url": "git+https://github.com/onepunk/purelymail-mcp-server.git"
   },
   "license": "MIT",
-  "author": "Guilherme Fontes <contrib@gui.wf> (https://gui.wf)",
+  "author": "Liam (onepunk)",
+  "contributors": [
+    "Guilherme Fontes <contrib@gui.wf> (https://gui.wf)"
+  ],
   "main": "dist/index.js",
   "bin": {
     "purelymail-mcp-server": "dist/index.js"
