@@ -1,6 +1,6 @@
 {
   "name": "@onepunk/purelymail-mcp-server",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "MCP server for PurelyMail email service management (onepunk fork of gui-wf/purelymail-mcp-server)",
   "keywords": [
     "mcp",

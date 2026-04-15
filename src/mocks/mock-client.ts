@@ -1,10 +1,15 @@
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-// Load mock responses from swagger examples
-const spec = JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), 'purelymail-api-spec.json'), 'utf8')
-);
+// Resolve the spec path relative to this module, not the caller's cwd.
+// Compiled layout: <pkg>/dist/mocks/mock-client.js
+// Spec lives at:   <pkg>/purelymail-api-spec.json
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const specPath = path.resolve(__dirname, "..", "..", "purelymail-api-spec.json");
+
+const spec = JSON.parse(fs.readFileSync(specPath, "utf8"));
 
 export class MockApiClient {
   constructor() {
